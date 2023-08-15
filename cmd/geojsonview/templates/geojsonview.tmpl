@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>geojsonview</title>
+    
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" href="static/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+        
+    <style>
+        body { height: 100%; margin: 0; }
+        #map { height: 100vh; }
+    </style>
+    
+    <script src="static/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin="" /></script>
+    <script>
+        function init() {
+            var geo = {{.}};
+            var map = L.map('map', {
+               zoom: 15
+            });
+
+            const baseMaps = {
+                StreetView: L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; OpenStreetMap'
+                }),
+                Topography: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+                    maxZoom: 19
+                })
+            };
+            L.control.layers(baseMaps).addTo(map);
+            L.control.scale().addTo(map);
+            baseMaps.StreetView.addTo(map);
+
+            var feature = L.geoJSON(geo).addTo(map);
+            map.fitBounds(feature.getBounds());
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div id="map"></div>
+</body>
+</html>
