@@ -18,6 +18,6 @@ Name|Description
 # instead of the 8080 default:
 $ ./geojsonview -a localhost:9090 sample.json
 
-# Provide GeoJSon from stdin:
+# Provide GeoJSON from stdin:
 $ cat sample.json | ./geojsonview
 ```
