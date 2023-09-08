@@ -24,12 +24,12 @@ func isNamedPipe(file *os.File) (bool, error) {
 	return pipe, nil
 }
 
-// GetInput returns an io.Reader to capture input - this will either be a file
-// from the supplied filename, or os.Stdin.
+// GetInput reads input for the caller. Input is expected from a filename or
+// a pipe - if no filename is given, and os.Stdin is not a named pipe, an
+// error is returned.
 //
-// Input is expected from a filename or a pipe - if no filename is given,
-// and os.Stdin is not a named pipe, an error is returned.
-func GetInput(filename string, in *os.File) (io.Reader, error) {
+// A []byte is returned regardless of the input source.
+func GetInput(filename string, in *os.File) ([]byte, error) {
 	var input io.Reader
 	if filename != "" {
 		f, err := os.Open(filename)
@@ -48,5 +48,10 @@ func GetInput(filename string, in *os.File) (io.Reader, error) {
 
 		input = os.Stdin
 	}
-	return input, nil
+
+	b, err := io.ReadAll(input)
+	if err != nil {
+		return nil, fmt.Errorf("could not read from input: %v\n", err)
+	}
+	return b, nil
 }

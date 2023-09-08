@@ -25,13 +25,15 @@ import (
 	"flag"
 	"fmt"
 	"html/template"
-	"io"
 	"io/fs"
+	"log"
 	"net/http"
 	"os"
 
 	"github.com/chriswalker/geo-utils/files"
 )
+
+const name = "geojsonview"
 
 var (
 	// Embedded FS for static files.
@@ -51,8 +53,8 @@ var (
 func main() {
 	// Slightly nicer help output.
 	flag.Usage = func() {
-		fmt.Println("geojsonview - view GeoJSON files on the web")
-		fmt.Println("\nUsage: geojsonview [-a <address:port>] <file>")
+		fmt.Printf("%s - view GeoJSON files on the web.\n", name)
+		fmt.Printf("\nUsage: %s [-a <address:port>] <file>\n", name)
 		flag.PrintDefaults()
 	}
 
@@ -71,20 +73,16 @@ func main() {
 	// Read input.
 	in, err := files.GetInput(filename, os.Stdin)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "geojsonview: %v\n", err)
+		fmt.Fprintf(os.Stderr, "%s: %v\n", name, err)
 		os.Exit(1)
 	}
-	b, err := io.ReadAll(in)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "geojsonview: %v\n", err)
-		os.Exit(1)
-	}
-	geoJSON = string(b)
+	geoJSON = string(in)
 
 	// Instantiate the template.
 	tmpl, err = template.New("geojsonview").Parse(tmplFile)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "unable to parse server template: %v\n", err)
+		fmt.Fprintf(os.Stderr, "%s: unable to parse server template: %v\n",
+			name, err)
 		os.Exit(1)
 	}
 
@@ -93,7 +91,8 @@ func main() {
 
 	fs, err := fs.Sub(static, "static")
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "unable to set up file system subtree: %v\n", err)
+		fmt.Fprintf(os.Stderr, "%s: unable to set up file system subtree: %v\n",
+			name, err)
 		os.Exit(1)
 	}
 	fsrv := http.FileServer(http.FS(fs))
@@ -102,7 +101,7 @@ func main() {
 	mux.HandleFunc("/", index)
 
 	fmt.Printf("View tracklog at http://%s/... (Ctrl-C to quit)\n", addr)
-	http.ListenAndServe(addr, mux)
+	log.Fatal(http.ListenAndServe(addr, mux))
 }
 
 // index is called when "/" is requested.
