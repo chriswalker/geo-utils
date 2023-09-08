@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Chris Walker" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+	<trk>
+		<name>Covent Garden Loop Track</name>
+		<desc>Length: 3.795 km (2.358 mi)</desc>
+		<trkseg>
+			<trkpt lat="51.5079679" lon="-0.1265359"></trkpt>
+			<trkpt lat="51.5096239" lon="-0.1232529"></trkpt>
+			<trkpt lat="51.5111463" lon="-0.1192832"></trkpt>
+			<trkpt lat="51.5112131" lon="-0.118897"></trkpt>
+			<trkpt lat="51.5116805" lon="-0.1188111"></trkpt>
+			<trkpt lat="51.5124951" lon="-0.1185536"></trkpt>
+			<trkpt lat="51.5129892" lon="-0.1177812"></trkpt>
+			<trkpt lat="51.5131895" lon="-0.1170516"></trkpt>
+			<trkpt lat="51.5132563" lon="-0.116086"></trkpt>
+			<trkpt lat="51.5130693" lon="-0.1153779"></trkpt>
+			<trkpt lat="51.5129491" lon="-0.1149058"></trkpt>
+			<trkpt lat="51.5127221" lon="-0.1145196"></trkpt>
+			<trkpt lat="51.5128957" lon="-0.1135325"></trkpt>
+			<trkpt lat="51.5133765" lon="-0.1127386"></trkpt>
+			<trkpt lat="51.5136702" lon="-0.110786"></trkpt>
+			<trkpt lat="51.5139507" lon="-0.1109147"></trkpt>
+			<trkpt lat="51.5153928" lon="-0.1114726"></trkpt>
+			<trkpt lat="51.5161673" lon="-0.1118803"></trkpt>
+			<trkpt lat="51.5172088" lon="-0.1129103"></trkpt>
+			<trkpt lat="51.5179699" lon="-0.113554"></trkpt>
+			<trkpt lat="51.5181836" lon="-0.1136613"></trkpt>
+			<trkpt lat="51.5181168" lon="-0.1146269"></trkpt>
+			<trkpt lat="51.5178498" lon="-0.1169658"></trkpt>
+			<trkpt lat="51.517783" lon="-0.1180816"></trkpt>
+			<trkpt lat="51.5176495" lon="-0.1186395"></trkpt>
+			<trkpt lat="51.5176228" lon="-0.1189828"></trkpt>
+			<trkpt lat="51.5176762" lon="-0.1192403"></trkpt>
+			<trkpt lat="51.5175694" lon="-0.120163"></trkpt>
+			<trkpt lat="51.5175026" lon="-0.1205921"></trkpt>
+			<trkpt lat="51.5173157" lon="-0.1217508"></trkpt>
+			<trkpt lat="51.5165946" lon="-0.1212144"></trkpt>
+			<trkpt lat="51.5159537" lon="-0.1205063"></trkpt>
+			<trkpt lat="51.5149922" lon="-0.1218796"></trkpt>
+			<trkpt lat="51.5145249" lon="-0.1221585"></trkpt>
+			<trkpt lat="51.5139106" lon="-0.1231241"></trkpt>
+			<trkpt lat="51.5137771" lon="-0.1235104"></trkpt>
+			<trkpt lat="51.5136235" lon="-0.123682"></trkpt>
+			<trkpt lat="51.5132095" lon="-0.1243901"></trkpt>
+			<trkpt lat="51.5126286" lon="-0.1253772"></trkpt>
+			<trkpt lat="51.5121279" lon="-0.1263964"></trkpt>
+			<trkpt lat="51.511981" lon="-0.126965"></trkpt>
+			<trkpt lat="51.5118274" lon="-0.126965"></trkpt>
+			<trkpt lat="51.5117272" lon="-0.1270294"></trkpt>
+			<trkpt lat="51.5108125" lon="-0.1269007"></trkpt>
+			<trkpt lat="51.5095838" lon="-0.126847"></trkpt>
+			<trkpt lat="51.5094636" lon="-0.126847"></trkpt>
+			<trkpt lat="51.5093969" lon="-0.127008"></trkpt>
+			<trkpt lat="51.5094102" lon="-0.1271689"></trkpt>
+			<trkpt lat="51.5087692" lon="-0.1271045"></trkpt>
+			<trkpt lat="51.5079679" lon="-0.1269865"></trkpt>
+		</trkseg>
+	</trk>
+</gpx>

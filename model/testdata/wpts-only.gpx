@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Chris Walker" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+	<wpt lat="51.5079946" lon="-0.1264179">
+		<name>Charing Cross Underground Station</name>
+		<sym>Circle, Blue</sym>
+	</wpt>
+	<wpt lat="51.5072467" lon="-0.1221907">
+		<name>Embankment Underground Station</name>
+		<sym>Circle, Blue</sym>
+	</wpt>
+	<wpt lat="51.5130827" lon="-0.1242721">
+		<name>Covent Garden Underground Station</name>
+		<sym>Circle, Blue</sym>
+	</wpt>
+	<wpt lat="51.5114668" lon="-0.1282954">
+		<name>Leicester Square Underground Station</name>
+		<sym>Circle, Blue</sym>
+	</wpt>
+</gpx>
