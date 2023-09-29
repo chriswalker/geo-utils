@@ -1,1 +1,1 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"MultiPoint","coordinates":[[0,0,0],[0,0,0],[0,0,0],[0,0,0]]}}]}
+{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"MultiPoint","coordinates":[[-0.1264179,51.5079946,0],[-0.1221907,51.5072467,0],[-0.1242721,51.5130827,0],[-0.1282954,51.5114668,0]]}}]}

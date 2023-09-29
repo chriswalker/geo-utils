@@ -80,7 +80,7 @@ func NewPosition(vals []float64) (Position, error) {
 	}
 
 	p := make(Position, len(vals))
-	copy(vals, p)
+	copy(p, vals)
 
 	return p, nil
 }
