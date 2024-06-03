@@ -27,17 +27,13 @@
             });
 
             const baseMaps = {
-                StreetView: L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    maxZoom: 19,
-                    attribution: '&copy; OpenStreetMap'
-                }),
                 Topography: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
                     maxZoom: 19
                 })
             };
             L.control.layers(baseMaps).addTo(map);
             L.control.scale().addTo(map);
-            baseMaps.StreetView.addTo(map);
+            baseMaps.Topography.addTo(map);
 
             var feature = L.geoJSON(geo).addTo(map);
             map.fitBounds(feature.getBounds());
