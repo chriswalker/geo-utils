@@ -31,7 +31,7 @@ func TestToGeoJSON(t *testing.T) {
 		testName := fileName[:len(fileName)-len(filepath.Ext(path))]
 
 		t.Run(testName, func(t *testing.T) {
-			// Read file
+			// Read file.
 			input, err := os.Open(path)
 			if err != nil {
 				t.Fatalf("error reading test input file: %s", err)
@@ -43,14 +43,14 @@ func TestToGeoJSON(t *testing.T) {
 				return
 			}
 
-			// Marshal into XML
+			// Marshal into XML.
 			var gpx model.GPX
 			if err := xml.Unmarshal(b, &gpx); err != nil {
 				t.Errorf("error unmarshalling '%s.gpx': %v\n", fileName, err)
 				return
 			}
 
-			// Convert to GeoJSON and then bytes
+			// Convert to GeoJSON and then bytes.
 			geoJSON, err := gpx.ToGeoJSON()
 			if err != nil {
 				t.Errorf("error converting to GeoJSON: %v\n", err)

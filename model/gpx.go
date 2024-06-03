@@ -73,7 +73,7 @@ type Track struct {
 
 // ToGeoJSON converts the GPX object into a GeoJSON one.
 //
-// Routes  and Track Segments are converted into GeoJSON
+// Routes and Track Segments are converted into GeoJSON
 // MultiLineString features and Waypoints as GeoJSON
 // MultiPoint features.
 //
