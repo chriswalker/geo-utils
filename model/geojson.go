@@ -91,7 +91,7 @@ type Feature struct {
 	ID          string         `json:"id,omitempty"`
 	BoundingBox []float64      `json:"bbox,omitempty"`
 	Geometry    any            `json:"geometry"` // Workable, but 'any' sucks a bit
-	Properties  map[string]any `json:"properties"`
+	Properties  map[string]any `json:"properties,omitempty"`
 }
 
 // NewFeature creates a new GeoJSON Feature.
