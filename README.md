@@ -1,12 +1,36 @@
 # `geo-utils`
-A collection of small command-line utilities for dealing with geospatial data.
+A collection of small command-line utilities for dealing with geospatial data. These are a mix of Go programs and plain bash scripts.
 
 Name|Description
 ---|---
+`bbox`|Reformats a supplied bounding-box string
+`bbox-picker`|Returns the bounding-box co-ords of a selected place
 `geojsonview`|Displays supplied GeoJSON data on a map
 `gpx2geojson`|Converts a GPX file into GeoJSON
 
 [Leaflet](https://leafletjs.com/) and [OpenStreetMap](https://www.openstreetmap.org/) are used to display web maps.
+
+## bbox
+`bbox` converts the supplied bounding-box string (assumed to be of the format:
+```
+{min_lng}{min_lat}{max_lng}{max_lat}
+```
+
+into:
+```
+{min_lng}{max_lng},{min_lat}{max_lat}
+```
+
+which is more useful within various other scripts and tools..
+
+## bbox-picker
+`bbox-picker` reads a (currently) hard-coded list of placenames/bounding boxes and pipes them into `fzf` for selection. The selected place's bounding-box is emitted to `stdout` for further pipelining.
+
+The places file is a simple text file assumed to have the format:
+
+```
+[Place name]|[Bounding Box]
+```
 
 ## geojsonview
 `geojsonview` takes in a GeoJSON file either from `stdin` or as a named file, and outputs the GeoJSON as a layer on an OpenStreetMap-backed map. It runs as a self-contained binary, meaning all static assets such as JavaScript dependencies and stylesheets are included within the compiled program.

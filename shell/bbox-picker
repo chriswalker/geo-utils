@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Reads the collected bounding boxes file
+# (at ~/Data/Work/Geo/Data/bboxes.txt) and passes through fzf for
+# selection
+
+picker ~/Dev/Work/Geo/Data/bboxes.txt
