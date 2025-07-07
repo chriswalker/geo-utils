@@ -4,7 +4,7 @@
 #
 #     {min_lon},{min_lat},{max_lon},{max_lat}
 #
-# emits a new bouding box string with the ordering changed
+# emits a new bounding box string with the ordering changed
 # to:
 #
 #     {min_lon},{max_lon},{min_lat},{max_lat}
