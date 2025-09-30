@@ -4,4 +4,4 @@
 # (at ~/Work/Geo/Data/bboxes.txt) and passes through fzf for
 # selection
 
-picker ~/Work/TheGeoLab/Data/bboxes.txt
+picker ~/Projects/Geo/Data/bboxes.txt
